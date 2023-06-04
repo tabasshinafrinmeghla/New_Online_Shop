@@ -5,16 +5,16 @@ import { useLoaderData } from 'react-router-dom';
 
 const Order = () => {
 
-  const products =useLoaderData();
-  console.log(products)
+  const cart=useLoaderData();
+  console.log(cart)
 
   return (
     <div className='shop-container'>
       <div className='products_container'>
-        <h2>Order pages:{products.length} </h2>
+        <h2>Order pages:{cart.length} </h2>
       </div>
       <div className='card_container'>
-        <Cart cart={[]}></Cart>
+        <Cart cart={cart}></Cart>
       </div>
     </div>
   );
